@@ -213,7 +213,7 @@ public class Voronoi {
         }
     }
 
-    private float getXOfEdge(Parabola par, float y) // počítá průsečík parabol v daném uzlu
+    private float getXOfEdge(Parabola par, float y)
     {
         Parabola left = getLeftChild(par);
         Parabola right = getRightChild(par);
@@ -294,8 +294,7 @@ public class Voronoi {
 
         float x = (b.g - a.g) / (a.f - b.f);
         float y = a.f * x + a.g;
-
-        // test rovnoběžnosti
+        
         if (Math.abs(x) + Math.abs(y) > 20 * width) {
             return null;
         } // parallel
